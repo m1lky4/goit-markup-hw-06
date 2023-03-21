@@ -274,6 +274,39 @@ body {
   width: 264px;
   padding-top: 16px;
 }
+.footer-form {
+  display: flex;
+}
+.footer-input {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 4px;
+  min-width: 264px;
+  color: white;
+  padding: 8px 16px;
+}
+.footer-input::placeholder {
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: white;
+}
+.footer-btn {
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  padding: 8px 24px;
+  background-color: #4d5ae5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  vertical-align: middle;
+  margin-left: 24px;
+}
+.footer-btn > svg {
+  vertical-align: middle;
+  margin-left: 16px;
+}
 .nav-links-contacts {
   font-style: normal;
   line-height: 1.5;
@@ -481,7 +514,8 @@ ul {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   max-width: 408px;
-  min-height: 576px;
+  min-height: 584px;
+  padding: 0 24px;
   width: 100%;
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -489,6 +523,133 @@ ul {
   border-radius: 4px;
   /* animation: open 1s cubic-bezier(0.4, 0, 0.2, 1) forwards; */
   transition: transform var(--transition);
+}
+.modal-text {
+  position: absolute;
+  top: 72px;
+  left: 24px;
+  right: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: var(--main-text-color);
+}
+.modal-form {
+  min-width: 360px;
+  margin-top: 112px;
+}
+.modal-group:not(:last-child) {
+  margin-bottom: 8px;
+}
+.modal-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.form-item {
+  height: 40px;
+}
+.form-label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--customers-border);
+}
+.form-input {
+  padding-left: 35px;
+  border: 1px solid var(--main-text-color);
+  border-radius: 4px;
+  outline: transparent;
+  transition: border var(--transition);
+}
+
+.form-input:focus {
+  border: 1px solid var(--main-nav-color);
+}
+.form-input:focus + .modal-svg {
+  fill: var(--main-nav-color);
+}
+
+.modal-svg {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  transition: fill var(--transition);
+}
+.form-agreement {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.form-text {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--customers-border);
+  user-select: none;
+}
+.form-btn {
+  display: block;
+  padding: 16px 65px;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background-color: var(--main-nav-color);
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.form-checkbox:focus:not(:checked) + .form-custom-checkbox {
+  outline: 1px solid black;
+}
+.form-custom-checkbox {
+  cursor: pointer;
+}
+.form-checkbox:checked + .form-custom-checkbox > .checked {
+  opacity: 1;
+}
+.form-checkbox:checked + .form-custom-checkbox > .unchecked {
+  opacity: 0;
+}
+.checked {
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+.unchecked {
+  opacity: 1;
+  transition: opacity var(--transition);
+}
+.form-link {
+  text-decoration: underline;
+  color: var(--main-nav-color);
+}
+.form-comment {
+  height: 120px;
+  resize: none;
+  margin-bottom: 16px;
+  padding-left: 16px;
+  padding-top: 8px;
+  border: 1px solid var(--main-text-color);
+  border-radius: 4px;
+  outline: transparent;
+  transition: border var(--transition);
+}
+.form-comment:focus {
+  border: 1px solid var(--main-nav-color);
+}
+.form-comment::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
 }
 .backdrop.is-hidden > .modal {
   transform: translate(-50%, -50%) scale(0.2);
@@ -505,6 +666,14 @@ ul {
   right: 24px;
   display: flex;
   padding: 8px;
+}
+.close-button:hover,
+.close-button:focus {
+  background-color: var(--main-nav-color);
+}
+.close-button:hover .close-svg,
+.close-button:focus .close-svg {
+  fill: white;
 }
 
 /* @keyframes open {
