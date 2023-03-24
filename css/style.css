@@ -96,8 +96,6 @@ body {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .menu-toggle {
-  min-height: 40px;
-  min-width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -171,7 +169,7 @@ body {
   gap: 40px;
 }
 .nav-links-contacts-phone {
-  font-size: 26px;
+  font-size: 36px;
   font-weight: 700;
   color: var(--main-p-color);
   letter-spacing: 0.02em;
@@ -189,6 +187,9 @@ body {
   padding: 10px;
   color: black;
   text-decoration: none;
+}
+.active {
+  color: var(--main-nav-color);
 }
 @media only screen and (min-width: 768px) {
   .navigation {
@@ -840,9 +841,7 @@ ul {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   max-width: 408px;
-  padding: 0 24px;
-  padding-top: 72px;
-  padding-bottom: 24px;
+  padding: 72px 16px 24px 16px;
   width: 100%;
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -850,6 +849,11 @@ ul {
   border-radius: 4px;
   /* animation: open 1s cubic-bezier(0.4, 0, 0.2, 1) forwards; */
   transition: transform var(--transition);
+}
+@media only screen and (min-width: 768px) {
+  .modal {
+    padding: 72px 24px 24px 24px;
+  }
 }
 .modal-text {
   font-weight: 500;
