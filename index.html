@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container">
         <div class="menu-nav">
           <nav class="menu-nav">
@@ -47,17 +47,28 @@
               >
             </li>
           </ul>
+
+          <button
+            type="button"
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg width="32px" height="22px">
+              <use href="./images/icon.svg#icon-hamburger"></use>
+            </svg>
+          </button>
         </div>
       </div>
-    </header> -->
+    </header>
     <main>
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
           <button class="hero-btn" type="button" data-modal-open>
             Order Service
           </button>
-        </div> -->
+        </div>
       </section>
       <section class="strategy section">
         <div class="container">
@@ -118,28 +129,55 @@
           <h2 class="section-title">What are we doing</h2>
           <ul class="list about-flex">
             <li class="about-img">
-              <img
-                src="./images/1.jpg"
-                width="360"
-                height="300"
-                alt="Web Development"
-              />
+              <picture>
+                <source
+                  media="(min-width:1200px )"
+                  srcset="
+                    ./images/strategy/first-desk@1x.jpg 1x,
+                    ./images/strategy/first-desk@2x.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/strategy/first-desk@1x.jpg"
+                  width="360"
+                  height="300"
+                  alt="Web Development"
+                />
+              </picture>
             </li>
             <li class="about-img">
-              <img
-                src="./images/2.jpg"
-                width="360"
-                height="300"
-                alt="UI Design"
-              />
+              <picture>
+                <source
+                  media="(min-width:1200px )"
+                  srcset="
+                    ./images/strategy/second-desk@1x.jpg 1x,
+                    ./images/strategy/second-desk@2x.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/2.jpg"
+                  width="360"
+                  height="300"
+                  alt="UI Design"
+                />
+              </picture>
             </li>
             <li class="about-img">
-              <img
-                src="./images/3.jpg"
-                width="360"
-                height="300"
-                alt="Mobile Development"
-              />
+              <picture>
+                <source
+                  media="(min-width:1200px )"
+                  srcset="
+                    ./images/strategy/third-desk@1x.jpg 1x,
+                    ./images/strategy/third-desk@2x.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/3.jpg"
+                  width="360"
+                  height="300"
+                  alt="Mobile Development"
+                />
+              </picture>
             </li>
           </ul>
         </div>
@@ -149,12 +187,35 @@
           <h2 class="section-title">Our Team</h2>
           <ul class="list team-flex">
             <li class="team-card">
-              <img
-                src="./images/4.jpg"
-                width="264"
-                height="260"
-                alt="Our Product Designer"
-              />
+              <picture>
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./images/team/1-desk@1x.jpg 1x,
+                    ./images/team/1-desk@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width:768px)"
+                  srcset="
+                    ./images/team/1-tablet@1x.jpg 1x,
+                    ./images/team/1-tablet@2x.jpg 2x
+                  "
+                />
+                <source
+                  srcset="
+                    ./images/team/1-mob@1x.jpg 1x,
+                    ./images/team/1-mob@2x.jpg 2x
+                  "
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="./images/team/1-mob@1x.jpg"
+                  width="264"
+                  height="260"
+                  alt="Our Product Designer"
+                />
+              </picture>
               <div class="card-content">
                 <h3 class="team-name">Mark Guerrero</h3>
                 <p class="team-position">Product Designer</p>
@@ -191,12 +252,35 @@
               </div>
             </li>
             <li class="team-card">
-              <img
-                src="./images/5.jpg"
-                width="264"
-                height="260"
-                alt="The person who are doing his best for you."
-              />
+              <picture>
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./images/team/2-desk@1x.jpg 1x,
+                    ./images/team/2-desk@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width:768px)"
+                  srcset="
+                    ./images/team/2-tablet@1x.jpg 1x,
+                    ./images/team/2-tablet@2x.jpg 2x
+                  "
+                />
+                <source
+                  srcset="
+                    ./images/team/2-mob@1x.jpg 1x,
+                    ./images/team/2-mob@2x.jpg 2x
+                  "
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="./images/5.jpg"
+                  width="264"
+                  height="260"
+                  alt="The person who are doing his best for you."
+                />
+              </picture>
               <div class="card-content">
                 <h3 class="team-name">Tom Ford</h3>
                 <p class="team-position">Frontend Developer</p>
@@ -233,12 +317,35 @@
               </div>
             </li>
             <li class="team-card">
-              <img
-                src="./images/6.jpg"
-                width="264"
-                height="260"
-                alt="Makes you smile,when you see the ad."
-              />
+              <picture>
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./images/team/3-desk@1x.jpg 1x,
+                    ./images/team/3-desk@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width:768px)"
+                  srcset="
+                    ./images/team/3-tablet@1x.jpg 1x,
+                    ./images/team/3-tablet@2x.jpg 2x
+                  "
+                />
+                <source
+                  srcset="
+                    ./images/team/3-mob@1x.jpg 1x,
+                    ./images/team/3-mob@2x.jpg 2x
+                  "
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="./images/6.jpg"
+                  width="264"
+                  height="260"
+                  alt="Makes you smile,when you see the ad."
+                />
+              </picture>
               <div class="card-content">
                 <h3 class="team-name">Camila Garcia</h3>
                 <p class="team-position">Marketing</p>
@@ -275,12 +382,35 @@
               </div>
             </li>
             <li class="team-card">
-              <img
-                src="./images/7.jpg"
-                width="264"
-                height="260"
-                alt="Trying to satisfy you with his designs."
-              />
+              <picture>
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./images/team/4-desk@1x.jpg 1x,
+                    ./images/team/4-desk@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width:768px)"
+                  srcset="
+                    ./images/team/4-tablet@1x.jpg 1x,
+                    ./images/team/4-tablet@2x.jpg 2x
+                  "
+                />
+                <source
+                  srcset="
+                    ./images/team/4-mob@1x.jpg 1x,
+                    ./images/team/4-mob@2x.jpg 2x
+                  "
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="./images/7.jpg"
+                  width="264"
+                  height="260"
+                  alt="Trying to satisfy you with his designs."
+                />
+              </picture>
               <div class="card-content">
                 <h3 class="team-name">Daniel Wilson</h3>
                 <p class="team-position">UI Designer</p>
@@ -495,6 +625,75 @@
         </button>
       </div>
     </div>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="close-svg" width="8px" height="8px">
+          <use href="./images/icon.svg#icon-close"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li>
+          <a class="nav-links-mobile" href="./index.html">Studio</a>
+        </li>
+        <li>
+          <a class="nav-links-mobile" href="./portfolio.html">Portfolio</a>
+        </li>
+        <li><a href="" class="nav-links-mobile">Contacts</a></li>
+      </ul>
+      <div>
+        <ul class="contacts-mobile">
+          <li>
+            <a class="nav-links-contacts-phone" href="tel:+110001111111"
+              >+11(000)111-11-11</a
+            >
+          </li>
+          <li>
+            <a class="nav-links-contacts-email" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="social mobile-menu-social">
+          <li class="social-list-item">
+            <a href="" class="social-list-icon">
+              <svg width="16px" height="16px">
+                <use href="./images/icon.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list-item">
+            <a href="" class="social-list-icon">
+              <svg width="16px" height="16px">
+                <use href="./images/icon.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list-item">
+            <a href="" class="social-list-icon">
+              <svg width="16px" height="16px">
+                <use href="./images/icon.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list-item">
+            <a href="" class="social-list-icon">
+              <svg width="16px" height="16px">
+                <use href="./images/icon.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
